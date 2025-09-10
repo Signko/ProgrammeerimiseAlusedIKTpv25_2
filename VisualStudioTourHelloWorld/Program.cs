@@ -15,11 +15,12 @@
             Console.WriteLine("2. jagamine (/)");
             Console.WriteLine("3. korrutamine (*)");
             Console.WriteLine("4. lahutamine (-)");
+            Console.WriteLine("5. Astendamine (^)");
             
             Console.WriteLine("Palun sisestage oma valik (1,2,3 või 4): ");
             int valik = int.Parse(Console.ReadLine());
 
-            int tulemus = 0;
+            double tulemus = 0;
             
             if (valik == 1) { 
                 tulemus = arv1 + arv2;
@@ -32,6 +33,9 @@
             }
             else if (valik == 4) {
                 tulemus = arv1 - arv2;
+            } 
+            else if (valik == 5) {
+                tulemus = Math.Pow(arv1, arv2);
             }
             else {
                 throw new Exception("Vale valik. Proovige uuesti.");
